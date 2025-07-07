@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, Date
 from ..database.database import Base
 
 class User(Base):
@@ -8,8 +8,8 @@ class User(Base):
     username = Column(String, unique=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    created_at = Column(String)
-    birthday = Column(String)
+    created_at = Column(DateTime)
+    birthday = Column(Date)
     gender = Column(String)
     country = Column(String)
     phone_number = Column(String)
